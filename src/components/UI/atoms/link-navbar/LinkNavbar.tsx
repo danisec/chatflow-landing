@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { HashLink as Link } from 'react-router-hash-link'
 
 function LinkNavbar() {
   const [changeTextColor, setChangeTextColor] = useState(
@@ -36,29 +37,33 @@ function LinkNavbar() {
 
   return (
     <>
-      <li
+      <Link
+        to={'/#home'}
         className={`font-sourcesans text-base font-semibold ${changeActiveNav}`}
       >
-        <a href='#home'>Home</a>
-      </li>
+        Home
+      </Link>
 
-      <li
+      <Link
+        to={'/#pricing'}
         className={`font-sourcesans text-base font-normal ${changeTextColor}`}
       >
-        <a href='#pricing'>Pricing</a>
-      </li>
+        Pricing
+      </Link>
 
-      <li
+      <Link
+        to={'/#'}
         className={`font-sourcesans text-base font-normal ${changeTextColor}`}
       >
-        <a href='#'>Support</a>
-      </li>
+        Support
+      </Link>
 
-      <li
+      <Link
+        to={'/#'}
         className={`font-sourcesans text-base font-normal ${changeTextColor}`}
       >
-        <a href='#'>Contact Us</a>
-      </li>
+        Contact Us
+      </Link>
     </>
   )
 }
