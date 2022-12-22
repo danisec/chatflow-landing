@@ -1,4 +1,5 @@
 import LinkNavbar from '../../atoms/link-navbar/LinkNavbar'
+import { HashLink as Link } from 'react-router-hash-link'
 
 function NavbarMobile() {
   return (
@@ -11,13 +12,16 @@ function NavbarMobile() {
             </ul>
 
             <ul className='flex flex-row items-center gap-5'>
-              <li className={`font-dmsans text-base font-bold`}>
-                <a href='#'>Login</a>
-              </li>
+              <Link to={'/#'} className={`font-dmsans text-base font-bold`}>
+                Login
+              </Link>
 
-              <li className='rounded-md bg-white/60 py-2 px-5 font-dmsans text-base font-bold text-gray-900 shadow-md shadow-gray-100'>
-                <a href='#'>Register</a>
-              </li>
+              <Link
+                to={'/#'}
+                className='rounded-md bg-white/60 py-2 px-5 font-dmsans text-base font-bold text-gray-900 shadow-md shadow-gray-100'
+              >
+                Register
+              </Link>
             </ul>
           </div>
         </div>
