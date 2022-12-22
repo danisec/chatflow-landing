@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { HashLink as Link } from 'react-router-hash-link'
 import Logo from '../../atoms/logo/Logo'
 import LinkNavbar from '../../atoms/link-navbar/LinkNavbar'
 import ButtonNavbar from '../../atoms/button/ButtonNavbar'
@@ -41,11 +42,11 @@ function Navbar() {
             className={`layout flex flex-row items-center justify-between py-6 transition-all duration-300 ease-in-out md:py-8 ${navColor}`}
           >
             <div className='flex items-center gap-14'>
-              <a href='/'>
+              <Link to={'/'}>
                 <Logo
                   className={`text-lg font-bold text-white ${changeTextColor}`}
                 />
-              </a>
+              </Link>
 
               <div className='hidden md:block'>
                 <ul className='flex items-center gap-12'>
@@ -61,15 +62,19 @@ function Navbar() {
 
             <div className='hidden md:block'>
               <ul className='flex items-center gap-4'>
-                <li
+                <Link
+                  to={'/#'}
                   className={`font-dmsans text-base font-bold ${changeTextColor}`}
                 >
-                  <a href='#'>Login</a>
-                </li>
+                  Login
+                </Link>
 
-                <li className='rounded-md bg-white/60 py-2 px-5 font-dmsans text-base font-bold text-gray-900'>
-                  <a href='#'>Register</a>
-                </li>
+                <Link
+                  to={'/#'}
+                  className='rounded-md bg-white/60 py-2 px-5 font-dmsans text-base font-bold text-gray-900'
+                >
+                  Register
+                </Link>
               </ul>
             </div>
           </div>
